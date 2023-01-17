@@ -1,7 +1,5 @@
 package com.revature.menu;
 
-
-
 import java.util.Scanner;
 import com.revature.daoimpl.ChildTrip;
  
@@ -18,7 +16,7 @@ public class Menu {
 			System.out.println("1.Add Trip Details");
 			System.out.println("2.deleteTripDetails");
 			System.out.println("3.upadateTripDetails");
-			System.out.println("4.showTrainerDetails\n");
+			System.out.println("4.showTripDetails\n");
 			System.out.println("Enter your choice: ");
 			
 			int choice=sc.nextInt();

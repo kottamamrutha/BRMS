@@ -23,6 +23,7 @@ public class ChildTrip implements TripManagement {
 	static {
 		details = new LinkedHashSet<Trip>();
 	}
+	
 
 	public void addTripDetails()
 	{
@@ -43,10 +44,82 @@ public class ChildTrip implements TripManagement {
 	}
 	public  void deleteTripDetails() {
 		
+		System.out.println("Enter BoardingTime to Delete");
+		String boardingTime=sc.nextLine();
+		
+		System.out.println("Enter ArrivalTime to Delete");
+		String arrivalTime=sc.nextLine();
+		
+		System.out.println("Enter TicketCharges to Delete");
+		int ticketCharges=sc.nextInt();
+		
+		Trip obj=new Trip();
+		
+		for(Trip i : details) {
+			if(i.getBoardingTime().equals(boardingTime)&& i.getArrivalTime().equals(arrivalTime)&&
+					i.getTicketCharges()==ticketCharges) 
+			{
+				obj=i;
+				
+			}
+			
+		}
+		details.remove(obj);
 	}
+	
 	public  void updateTripDetails() {
 		
+		System.out.println("Enter Trip Where to Update BoardingTime and ArrivalTime");
+	    System.out.println("Enter BoardingTime");
+	    String boardingTime=sc.nextLine();
+	    
+	    System.out.println("Enter ArrivalTime");
+	    String arrivalTime=sc.nextLine();
+	    
+	    System.out.println("Enter TicketCharges");
+	    int ticketCharges=sc.nextInt();
+	    
+		System.out.println("Select from below options to Update  ");
+		System.out.println("1.BoardingTime");
+		System.out.println("2.ArrivalTime");
+		System.out.println("3.TicketCharges");
+		 
+		int choice=sc.nextInt();
+		if(choice==1) {
+		System.out.println("Enter BoardingTime to update:");
 		
+		for(Trip i:details) {
+			if(i.getBoardingTime().equals(boardingTime)&& i.getArrivalTime().equals(arrivalTime)&&
+					i.getTicketCharges()==ticketCharges) 
+			{
+				i.setBoardingTime(sc.nextLine());
+				
+			}
+		}
+		}
+		else if(choice==2) {
+			System.out.println("Enter ArrivalTime to update:");
+			for(Trip i:details) {
+				if(i.getBoardingTime().equals(boardingTime) && i.getArrivalTime().equals(arrivalTime)&& i.getTicketCharges()==ticketCharges) {
+					i.setArrivalTime(sc.next());
+					
+				}
+	     	}
+		}
+		 
+		else if(choice==3) {
+			System.out.println("Enter TicketCharges to update:");
+ 
+			for(Trip i:details) {
+				if(i.getBoardingTime().equals(boardingTime) && i.getArrivalTime().equals(arrivalTime)) {
+					
+					i.setTicketCharges(sc.nextInt());
+					 
+				
+				}
+			
+			}
+		}
 	}
 	
 	public  void showTripDetails() {

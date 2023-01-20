@@ -1,0 +1,6 @@
+com\revature\menu\Menu.class
+com\revature\dao\TripManagement.class
+com\revature\constants\Constant.class
+com\revature\config\DatabaseConnection.class
+com\revature\daoimpl\TripDaoImpl.class
+com\revature\model\Trip.class

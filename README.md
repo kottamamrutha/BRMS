@@ -14,7 +14,7 @@ I am working on Trip usecase which consists of 2 foreign keys. <br>
 ----AddTrip which is executed when addTrip.jsp is submitted <br>
 ----UpdateTrip which is executed when editTrip.jsp is submitted <br>
 ----DeleteTrip which is executed when deleteTrip.jsp is submitted <br>
-----ShowTrip which is executed and transfers the control to showBatches2.jsp when showTrip.jsp is submitted<br>
+----ShowTrip which is executed  when showTrip.jsp is submitted<br>
 
 
 

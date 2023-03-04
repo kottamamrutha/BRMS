@@ -67,12 +67,19 @@ public class TripDaoImpl implements TripManagement {
 		PreparedStatement ps = con.prepareStatement(insertQuery);
 		logger.info("enter TripId");
 		int tripId=sc.nextInt();
+		
 		logger.info("enter  BoardingTime");
 		String boardingTime=sc.next();
+		
 		logger.info("enter ArrivalTime");
 		String arrivalTime=sc.next();
+		
 		logger.info("enter TicketCharges");
 		int ticketCharges=sc.nextInt();
+		
+		logger.info("enter BusRegNo");
+		String busRegNo=sc.next();
+		
 		logger.info("enter routeId");
 		int routeId=sc.nextInt();
 		
@@ -80,7 +87,8 @@ public class TripDaoImpl implements TripManagement {
     	ps.setString(2,boardingTime);
         ps.setString(3,arrivalTime);
         ps.setInt(4,ticketCharges);
-        ps.setInt(5, routeId);
+        ps.setString(5,busRegNo);
+        ps.setInt(6, routeId);
 		//logger.debug("I want to inspect PreparedStatement Object: " +ps);
 		int n = ps.executeUpdate();
 		ps.close();
@@ -200,12 +208,14 @@ public class TripDaoImpl implements TripManagement {
 			String boardingTime=rs.getString(2);
 			String arrivalTime=rs.getString(3);
 			int ticketCharges=rs.getInt(4);
-			int routeId=rs.getInt(5);
+			String busRegNo=rs.getString(5);
+			int routeId=rs.getInt(6);
 			
 			trip.setTripId(tripId);
 			trip.setBoardingTime(boardingTime);
 			trip.setArrivalTime(arrivalTime);
 			trip.setTicketCharges(ticketCharges);
+			trip.setBusRegNo(busRegNo);
 			trip.setRouteId(routeId);
 			
 			trips.add(trip);

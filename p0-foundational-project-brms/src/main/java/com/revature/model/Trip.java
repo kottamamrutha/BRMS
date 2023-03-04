@@ -5,17 +5,19 @@ public class Trip {
 	private String boardingTime;
 	private String arrivalTime;
 	private int ticketCharges;
+	private String busRegNo;
 	private int routeId;
 	public Trip() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Trip(int tripId, String boardingTime, String arrivalTime, int ticketCharges, int routeId) {
+	public Trip(int tripId, String boardingTime, String arrivalTime, int ticketCharges, String busRegNo, int routeId) {
 		super();
 		this.tripId = tripId;
 		this.boardingTime = boardingTime;
 		this.arrivalTime = arrivalTime;
 		this.ticketCharges = ticketCharges;
+		this.busRegNo = busRegNo;
 		this.routeId = routeId;
 	}
 	public int getTripId() {
@@ -42,6 +44,12 @@ public class Trip {
 	public void setTicketCharges(int ticketCharges) {
 		this.ticketCharges = ticketCharges;
 	}
+	public String getBusRegNo() {
+		return busRegNo;
+	}
+	public void setBusRegNo(String busRegNo) {
+		this.busRegNo = busRegNo;
+	}
 	public int getRouteId() {
 		return routeId;
 	}
@@ -51,9 +59,8 @@ public class Trip {
 	@Override
 	public String toString() {
 		return "Trip [tripId=" + tripId + ", boardingTime=" + boardingTime + ", arrivalTime=" + arrivalTime
-				+ ", ticketCharges=" + ticketCharges + ", routeId=" + routeId + "]";
+				+ ", ticketCharges=" + ticketCharges + ", busRegNo=" + busRegNo + ", routeId=" + routeId + "]";
 	}
 	
 	
-
 }
